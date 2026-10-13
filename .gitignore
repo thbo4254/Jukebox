@@ -1,0 +1,31 @@
+# Credentials and private endpoint configuration
+.env
+.env.*
+!.env.example
+class-endpoints*
+*credentials*
+*secrets*
+
+# Local runtime library and temporary uploads (not bundled samples)
+/data/
+/uploads/
+/voice-references/
+/tmp/
+*.log
+
+# Python and local tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Operating system files
+.DS_Store
+Thumbs.db
