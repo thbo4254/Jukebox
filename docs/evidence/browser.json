@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Qwen lyrics reviewed and edited; ACE+FLUX saved",
+    "result": {
+      "id": "b0fbb3900a374ffebd75205827cf875f",
+      "status": "ready",
+      "cover": "ready",
+      "duration": 12,
+      "lyrics": "[Verse]\nSteam rises from the mug,\nGreen hills blur in the rain.\nThe tracks sing a soft tune,\nCarrying me home again.\nHome is waiting past the rain.",
+      "requested": 12
+    }
+  },
+  {
+    "name": "Bundled covers displayed",
+    "result": [
+      {
+        "alt": "Cover for Sunday Coffee — instrumental check",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "alt": "Cover for Window Seat — browser check",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "alt": "Cover for The Long Way Home",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "alt": "Cover for Saturday Neon",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "alt": "Cover for Amber After Hours",
+        "width": 768,
+        "height": 768
+      }
+    ]
+  },
+  {
+    "name": "Pause while live DJ request runs preserved",
+    "result": {
+      "phase": "speech",
+      "paused": true,
+      "intro": "Here is “Amber After Hours,” a warm jazz trio painting rain on the street with brushed drums and upright bass."
+    }
+  },
+  {
+    "name": "Natural speech-to-song transition",
+    "result": {
+      "phase": "music",
+      "id": "sample-amber-after-hours",
+      "src": "http://127.0.0.1:8765/api/songs/sample-amber-after-hours/audio",
+      "paused": false
+    }
+  },
+  {
+    "name": "Natural audio ended advanced independent queue",
+    "result": {
+      "phase": "loading",
+      "id": "sample-saturday-neon",
+      "queue": 0
+    }
+  },
+  {
+    "name": "Skip pending DJ starts associated song, no stale takeover",
+    "result": true
+  },
+  {
+    "name": "Mobile horizontal overflow",
+    "result": false
+  },
+  {
+    "name": "Uncaught browser exceptions",
+    "result": []
+  }
+]

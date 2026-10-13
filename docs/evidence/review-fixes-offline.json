@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-10-13T03:33:04.513141+00:00",
+  "scope": "Offline review-fix verification only; no credential scan or live service/browser run. Historical evidence is unchanged.",
+  "runs": [
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "output": "..................................                                       [100%]\n34 passed in 0.32s",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "command": "node --test tests/*.test.mjs",
+      "output": "\u2714 intentional pause invalidates pending play rejection without a browser-block notice (1.003667ms)\n\u2714 stale AbortError after successful same-source resume cannot pause or block queue advance (1.245ms)\n\u2714 DJ ends then music; music ends then next queued track (1.943459ms)\n\u2714 skip during pending speech starts associated music and ignores stale response (1.435834ms)\n\u2714 pause while DJ loads remains paused when response arrives (1.407167ms)\n\u2714 skip during speech starts this song; skip music advances queue (0.4325ms)\n\u2714 DJ failure continues music with an understandable notice (0.180416ms)\n\u2714 DJ off bypasses speech and queues are independent (0.063792ms)\n\u2714 autoplay rejection leaves resumable paused state (0.087834ms)\n\u2714 bundled sample filenames never override the protected audio route (0.076459ms)\n\u2714 late speech play rejection cannot pause music after speech decoder failure (1.928667ms)\n\u2714 unsupported music gives decode guidance rather than an autoplay diagnosis (0.109833ms)\n\u2714 queue exhaustion clears current and pauses (1.424916ms)\n\u2714 clearing voice while its read is pending never sends the cleared reference (1.812708ms)\n\u2714 newer voice selection wins even when the older read completes last (0.542166ms)\n\u2714 failed voice read is handled and clears previous private reference and filename (0.596417ms)\n\u2139 tests 16\n\u2139 suites 0\n\u2139 pass 16\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 44.239042",
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Example only. Keep your real class-endpoints.txt OUTSIDE the repository.
+# The app reads only Base URL / API Key / Model for these four class ports.
+# It uses the documented host allowlist to prevent arbitrary outbound requests.
+Base URL: http://dobolyi.com:9001/v1
+API Key: YOUR_CLASS_KEY
+Model: cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit
+
+Base URL: http://dobolyi.com:9006/v1
+API Key: YOUR_CLASS_KEY
+Model: black-forest-labs/FLUX.2-klein-4B
+
+Base URL: http://dobolyi.com:9007
+API Key: YOUR_CLASS_KEY
+Model: ACE-Step/acestep-v15-xl-turbo
+
+Base URL: http://dobolyi.com:9008
+API Key: YOUR_CLASS_KEY
+Model: Chatterbox Multilingual V3

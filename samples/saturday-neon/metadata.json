@@ -1,0 +1,26 @@
+{
+  "id": "saturday-neon",
+  "title": "Saturday Neon",
+  "topic": "Meeting friends at the diner, then dancing together on a cheerful Saturday night",
+  "style": "upbeat retro soul-pop, grooving bass, bright rhythm guitar, handclaps",
+  "mood": "cheerful and playful",
+  "instrumental": false,
+  "cover_prompt": "A coral and turquoise neon diner sign at dusk, friends silhouetted through the window, joyful vintage atmosphere",
+  "duration": 30,
+  "lyrics": "[Verse]\nGrease stains and laughter fill the booth,\nSaturday night feels like a boot.\nWe slide out, shoes squeak on the floor,\nKickin\u2019 up joy, kickin\u2019 off more.\n\n[Chorus]\nClap your hands, let the bassline roll,\nWe\u2019re spinning stories that make us whole.\nNeon lights and a retro beat,\nDancin\u2019 hard on this Saturday night!",
+  "generated_at": "2026-10-13T02:50:33.561445+00:00",
+  "lyrics_model": "cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit",
+  "lyrics_source": "Qwen class endpoint; passed unchanged to ACE-Step",
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "created_at": 1791859834,
+    "music_prompt": "upbeat retro soul-pop, grooving bass, bright rhythm guitar, handclaps, cheerful and playful. Meeting friends at the diner, then dancing together on a cheerful Saturday night. English vocals.",
+    "seed": "1891124119"
+  },
+  "image_model": "black-forest-labs/FLUX.2-klein-4B",
+  "image_prompt": "Original square album artwork, no text, no lettering, no logos. A coral and turquoise neon diner sign at dusk, friends silhouetted through the window, joyful vintage atmosphere. Music: upbeat retro soul-pop, grooving bass, bright rhythm guitar, handclaps. Mood: cheerful and playful. Painterly analog print, thoughtful composition, warm film grain.",
+  "actual_duration": 30.0,
+  "sample_rate": 48000,
+  "audio": "audio.mp3",
+  "cover": "cover.png"
+}

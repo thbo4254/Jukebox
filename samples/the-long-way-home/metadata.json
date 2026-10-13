@@ -1,0 +1,26 @@
+{
+  "id": "the-long-way-home",
+  "title": "The Long Way Home",
+  "topic": "Taking the scenic route home, winding country roads and a sunset, remembering the people waiting for you",
+  "style": "acoustic folk, fingerpicked acoustic guitar, gentle bass, soft percussion",
+  "mood": "cozy and reflective",
+  "instrumental": false,
+  "cover_prompt": "A winding country road disappearing into rolling hills at sunset, warm peach sky, quiet rural landscape",
+  "duration": 30,
+  "lyrics": "[Verse]\nGolden light spills on the winding lane,\nBreeze hums soft through the rustling pine.\nThe world slows down, the stress fades out,\nLeaving only peace in my mind.\n\n[Chorus]\nHome is the glow in the window pane,\nFaces I love, waiting there.\nIn this quiet, I breathe again,\nSafe and sound in the evening air.",
+  "generated_at": "2026-10-13T02:50:40.110244+00:00",
+  "lyrics_model": "cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit",
+  "lyrics_source": "Qwen class endpoint; passed unchanged to ACE-Step",
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "created_at": 1791859841,
+    "music_prompt": "acoustic folk, fingerpicked acoustic guitar, gentle bass, soft percussion, cozy and reflective. Taking the scenic route home, winding country roads and a sunset, remembering the people waiting for you. English vocals.",
+    "seed": "3221319082"
+  },
+  "image_model": "black-forest-labs/FLUX.2-klein-4B",
+  "image_prompt": "Original square album artwork, no text, no lettering, no logos. A winding country road disappearing into rolling hills at sunset, warm peach sky, quiet rural landscape. Music: acoustic folk, fingerpicked acoustic guitar, gentle bass, soft percussion. Mood: cozy and reflective. Painterly analog print, thoughtful composition, warm film grain.",
+  "actual_duration": 30.0,
+  "sample_rate": 48000,
+  "audio": "audio.mp3",
+  "cover": "cover.png"
+}

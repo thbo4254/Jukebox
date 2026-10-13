@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Actual MP3 upload -> Chatterbox reference speech -> browser playback",
+    "result": {
+      "synthetic": true,
+      "phase": "speech",
+      "intro": "Next up is \"The Long Way Home,\" a cozy acoustic folk track featuring gentle fingerpicked guitar. It’s perfect for that scenic sunset drive."
+    }
+  },
+  {
+    "name": "Music pause freezes playback, Play resumes",
+    "result": true
+  },
+  {
+    "name": "Use default voice clears file control",
+    "result": true
+  },
+  {
+    "name": "Invalid voice upload explains failure and continues real music",
+    "result": {
+      "notice": "DJ unavailable: Use a valid MP3 or WAV voice reference, 1–60 seconds and under 6 MB. Only upload a voice you have permission to use.. Continuing with music.",
+      "paused": false
+    }
+  },
+  {
+    "name": "Second independent tab has its own empty queue",
+    "result": true
+  },
+  {
+    "name": "Refresh discards voice; saved queue survives only in its tab",
+    "result": {
+      "voiceFiles": 0,
+      "queue": [
+        "sample-amber-after-hours"
+      ]
+    }
+  },
+  {
+    "name": "Browser exceptions",
+    "result": []
+  }
+]
