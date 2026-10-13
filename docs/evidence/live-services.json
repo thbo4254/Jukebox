@@ -1,0 +1,69 @@
+{
+  "tested_at": "2026-10-13T03:06:54.948590+00:00",
+  "samples": [
+    {
+      "title": "Amber After Hours",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "decoded_seconds": 30.0,
+      "peak": 0.8781898021697998,
+      "cover_size": [
+        768,
+        768
+      ],
+      "audio_sha256": "717229e270341809a82aa049825a3b92a836134922c0dd1b9fc36b5d36c7559e",
+      "cover_sha256": "2dd07879a330ba05a7ef5a9046e012d19331f76615744f4adcbb3516e016967d"
+    },
+    {
+      "title": "Saturday Neon",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "decoded_seconds": 30.0,
+      "peak": 0.8247646689414978,
+      "cover_size": [
+        768,
+        768
+      ],
+      "audio_sha256": "6748531dfbdd24856c33c498aa816b5abcb8574af48ba44ab0409045f374d362",
+      "cover_sha256": "35343977afc37b7afda1abaabe82660cce589f5e82f972bce15e94fa19285b05"
+    },
+    {
+      "title": "The Long Way Home",
+      "frames": 1440000,
+      "sample_rate": 48000,
+      "channels": 2,
+      "decoded_seconds": 30.0,
+      "peak": 0.8667817711830139,
+      "cover_size": [
+        768,
+        768
+      ],
+      "audio_sha256": "8aa52b68ee997157a3e5bc98284344ba5f083fe9275d0f6f4bc4a5bd7f6282eb",
+      "cover_sha256": "f4e045d9d5ecade73e4b0afd631b12bac90406164620e4c22a671cf51338f37c"
+    }
+  ],
+  "default_dj": {
+    "status": 200,
+    "intro": "Next up is \"The Long Way Home,\" an acoustic folk track featuring gentle fingerpicked guitar. It captures the cozy, reflective mood of winding country roads and the warmth of remembering loved ones waiting for you.",
+    "decoded_seconds": 10.08,
+    "sample_rate": 24000,
+    "model": "chatterbox-v3",
+    "personality": "Music Enthusiast"
+  },
+  "synthetic_reference_dj": {
+    "status": 200,
+    "intro": "Get ready to groove with \"Saturday Neon\"! It\u2019s got that upbeat retro soul-pop vibe perfect for dancing with friends all night long.",
+    "decoded_seconds": 6.48,
+    "reference_origin": "App-generated default Chatterbox speech held only in memory; synthetic smoke test, NOT a human voice-clone quality test"
+  },
+  "invalid_reference": {
+    "status": 422,
+    "detail": "Use a valid MP3 or WAV voice reference, 1\u201360 seconds and under 6 MB. Only upload a voice you have permission to use."
+  },
+  "invalid_duration": {
+    "status": 422,
+    "detail": "Check the form: title, topic, style and mood are required; duration must be 10\u2013120 seconds and text must fit the displayed limits."
+  }
+}

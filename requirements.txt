@@ -1,0 +1,10 @@
+# Python 3.12+; versions exercised on macOS. No Node build needed.
+fastapi==0.143.0
+starlette==1.7.0
+uvicorn==0.54.0
+httpx==0.28.1
+anyio==4.15.1
+pydantic==2.14.1
+pillow==12.3.0
+soundfile==0.14.0
+numpy==2.5.4

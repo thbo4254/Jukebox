@@ -1,0 +1,24 @@
+{
+  "id": "amber-after-hours",
+  "title": "Amber After Hours",
+  "topic": "A quiet late-night cafe, watching rain paint the street",
+  "style": "warm jazz trio, piano, brushed drums, upright bass",
+  "mood": "relaxed and intimate",
+  "instrumental": true,
+  "cover_prompt": "An amber-lit cafe window looking out onto a rainy street at night, glowing reflections",
+  "duration": 30,
+  "lyrics": "",
+  "generated_at": "2026-10-13T02:50:27.847619+00:00",
+  "provenance": {
+    "model": "acestep-v15-xl-turbo",
+    "created_at": 1791859828,
+    "music_prompt": "warm jazz trio, piano, brushed drums, upright bass, relaxed and intimate. A quiet late-night cafe, watching rain paint the street. Instrumental, no vocals.",
+    "seed": "2071279030"
+  },
+  "image_model": "black-forest-labs/FLUX.2-klein-4B",
+  "image_prompt": "Original square album artwork, no text, no lettering, no logos. An amber-lit cafe window looking out onto a rainy street at night, glowing reflections. Music: warm jazz trio, piano, brushed drums, upright bass. Mood: relaxed and intimate. Painterly analog print, thoughtful composition, warm film grain.",
+  "actual_duration": 30.0,
+  "sample_rate": 48000,
+  "audio": "audio.mp3",
+  "cover": "cover.png"
+}

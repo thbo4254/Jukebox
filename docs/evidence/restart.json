@@ -1,0 +1,32 @@
+{
+  "real_server_restart": true,
+  "identical_metadata_before_after": true,
+  "track_count": 5,
+  "decoded_after_restart": [
+    {
+      "id": "b832dfbb8b114a8d99eb4a84921e2329",
+      "title": "Sunday Coffee \u2014 instrumental check",
+      "duration": 10.0
+    },
+    {
+      "id": "b0fbb3900a374ffebd75205827cf875f",
+      "title": "Window Seat \u2014 browser check",
+      "duration": 12.0
+    },
+    {
+      "id": "sample-the-long-way-home",
+      "title": "The Long Way Home",
+      "duration": 30.0
+    },
+    {
+      "id": "sample-saturday-neon",
+      "title": "Saturday Neon",
+      "duration": 30.0
+    },
+    {
+      "id": "sample-amber-after-hours",
+      "title": "Amber After Hours",
+      "duration": 30.0
+    }
+  ]
+}
