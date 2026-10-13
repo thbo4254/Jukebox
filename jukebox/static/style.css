@@ -149,41 +149,16 @@ small{font-size:12px;color:var(--muted)}
   border:1.5px solid #c9a35c;border-radius:50%;
   box-shadow:0 0 3px rgba(201,163,92,.6);
 }
-/* the ball itself — realistic: small two-tone mosaic tiles (each square
-   catches room light differently) with thin dark gaps, a blazing hot spot,
-   a shadow band, and a rim that falls into dark. The SURFACE pans under a
-   FIXED light — a ball spinning on its vertical string. */
+/* the ball itself — a hand-built SVG: 144 mirror tiles, each shaded by a
+   lighting model (spotlight, shadow band, warm ceiling, dark rim). */
 .disco-globe{
   position:absolute;top:28px;left:50%;width:60px;height:60px;margin-left:-30px;
-  border-radius:50%;
-  background:
-    /* two blazing tiles where the spotlight hits hardest */
-    radial-gradient(circle at 33% 58%, #ffffff 0 2.5px, rgba(255,255,255,0) 4px),
-    radial-gradient(circle at 41% 66%, #fff 0 1.5px, rgba(255,255,255,0) 3px),
-    /* the hot white spot — a spotlight glaring off a cluster of tiles */
-    radial-gradient(circle at 36% 62%, rgba(255,255,255,.92) 0 8%, rgba(255,255,255,.3) 17%, transparent 36%),
-    /* warm ceiling reflection along the top */
-    radial-gradient(circle at 50% 16%, rgba(255,214,170,.32) 0 16%, transparent 42%),
-    /* the shadow band across the middle */
-    radial-gradient(circle at 64% 44%, rgba(16,12,22,.55) 0 12%, transparent 34%),
-    /* sphere shading — the rim falls into dark, the face stays bright */
-    radial-gradient(circle at 50% 46%, transparent 50%, rgba(10,8,16,.42) 80%, rgba(5,4,10,.82) 100%),
-    /* thin dark grout lines between tiles */
-    repeating-linear-gradient(0deg,  rgba(20,18,30,.85) 0 1px, transparent 1px 5px),
-    repeating-linear-gradient(90deg, rgba(20,18,30,.85) 0 1px, transparent 1px 5px),
-    /* the mosaic itself: silver squares, each gently differing in tone */
-    repeating-linear-gradient(0deg,  rgba(0,0,0,.14) 0 5px, transparent 5px 10px),
-    repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 5px, transparent 5px 10px),
-    /* silver base with a soft vertical falloff */
-    linear-gradient(180deg,#e6e6ee 0%,#c9c9d6 55%,#afafc0 100%);
-  box-shadow:
-    0 0 26px rgba(255,150,205,.35),
-    0 0 70px rgba(255,46,136,.14),
-    0 6px 14px rgba(0,0,0,.35);
-  /* the surface turns (background-position pans the tile mosaic by exactly
-     one tile period, so the loop is seamless) — highlights stay fixed */
-  animation:turn-tiles 30s linear infinite;
+  display:block;border-radius:50%;
+  filter:drop-shadow(0 0 26px rgba(255,150,205,.35)) drop-shadow(0 0 70px rgba(255,46,136,.14));
 }
+/* the traveling light glint — a soft reflection sweeping around the ball,
+   like mirror flashes as the surface turns */
+.flicker{animation:flicker-spin 9s linear infinite}
 /* the light it casts — colored dots spinning around the ball, like the spots
    a real mirror ball throws onto the walls */
 .disco-glimmer{
@@ -319,10 +294,15 @@ dialog::backdrop{background:#0a0208cc}
 /* ── Neon motion — only when the user hasn't asked for less ──── */
 /* pendulum sway: the ball swings on its wire like a hanging ball does */
 @keyframes swing-ball{0%,100%{transform:rotate(3.5deg)}50%{transform:rotate(-3.5deg)}}
-/* the surface turning: the tile mosaic pans sideways under a fixed light
-   (one tile period = 5px, so the loop is seamless) — this is what a ball
-   spinning on its vertical string looks like from the side */
-@keyframes turn-tiles{to{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0 0,-5px 0,0 0,-5px 0,0 0}}
+/* the traveling glint: a soft light sweeping around the ball's rim, like
+   mirror flashes as the surface turns under the spotlight */
+@keyframes flicker-spin{
+  0%,100%{cx:50px;cy:9px;opacity:.85}
+  22%{cx:80px;cy:36px;opacity:.95}
+  42%{cx:72px;cy:76px;opacity:.35}
+  62%{cx:38px;cy:88px;opacity:.8}
+  82%{cx:16px;cy:58px;opacity:.9}
+}
 /* the cast light spots orbiting the ball */
 @keyframes spin-glimmer{to{transform:rotate(-360deg)}}
 @keyframes bulb-blink{
@@ -377,7 +357,7 @@ main{padding:32px 26px}
 .disco-ball{flex-basis:38px}
 .disco-string{width:1.5px;height:10px;top:4px}
 .disco-string::after{width:4px;height:4px;border-width:1px}
-.disco-globe{width:38px;height:38px;top:14px;margin-left:-19px;box-shadow:0 0 14px rgba(255,150,205,.3)}
+.disco-globe{width:38px;height:38px;top:14px;margin-left:-19px;filter:drop-shadow(0 0 14px rgba(255,150,205,.3))}
 .disco-glimmer{display:none}
 .topbar #connection{font-size:9px}
 main{padding:28px 20px}
