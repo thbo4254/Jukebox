@@ -173,6 +173,18 @@ small{font-size:12px;color:var(--muted)}
     -42px -24px 1px rgba(62,240,221,.5);
   animation:spin-glimmer 30s linear infinite;
 }
+/* ── cute deco: jukebox, cassette, floating notes ───────────── */
+.deco{display:inline-block;vertical-align:middle;pointer-events:none;flex-shrink:0}
+.topbar .jukebox{height:22px;margin-right:9px;filter:drop-shadow(0 0 5px rgba(255,46,136,.75))}
+.now-playing .tape{height:15px;margin:0 7px 6px 0;filter:drop-shadow(0 0 5px rgba(255,46,136,.5))}
+.deco.note{position:fixed;height:26px;opacity:.16;z-index:0;pointer-events:none}
+.deco.note.n1{left:9%;top:27%;--r:-14deg;animation:bob-note 7s ease-in-out infinite}
+.deco.note.n2{right:8%;top:55%;height:20px;--r:10deg;animation:bob-note 8.5s ease-in-out infinite}
+.deco.note.n3{left:32%;bottom:30%;height:22px;--r:-8deg;animation:bob-note 6.5s ease-in-out infinite}
+@keyframes bob-note{
+  0%,100%{transform:translateY(0) rotate(var(--r,0deg))}
+  50%{transform:translateY(-16px) rotate(var(--r,0deg))}
+}
 .topbar #connection{letter-spacing:0;max-width:220px;text-align:right;font-size:11px}
 .topbar .warning{color:var(--danger)}
 main{padding:42px 36px}
@@ -353,6 +365,7 @@ main{padding:32px 26px}
 .brand{font-size:26px}
 .workspace,.queue-panel{margin-left:0}
 .topbar{height:53px;padding:0 20px;font-size:8px}
+.topbar .jukebox{height:15px;margin-right:6px}
 /* the ball shrinks on small bars but never disappears */
 .disco-ball{flex-basis:38px}
 .disco-string{width:1.5px;height:10px;top:4px}

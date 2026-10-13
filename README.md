@@ -12,6 +12,12 @@ A little music, made yours. A local Python music app that turns a topic into an 
 
 Not running yet? Start it first with the steps below ([Start here](#start-here)), then come back to this link.
 
+## What's new
+
+- **10/13/26 — Disco neon theme**: 70s disco look — glowing neon bubble-letter signs, hot pink / cyan / yellow neon, midnight-purple walls, and a mirror ball in the header (a hand-built SVG with 144 individually lit mirror tiles, a sweeping glint, and colored light dots orbiting it). Pure CSS + inline SVG — still zero remote fonts or downloads.
+- **10/13/26 — Cute deco graphics**: a glowing jukebox icon in the top bar, a cassette tape in the player, and three music notes gently bobbing in the background. All hand-drawn inline SVG + CSS — no downloads, no JavaScript changes.
+- **10/13/26 — Quick open link**: click **[Open the Jukebox](http://127.0.0.1:8765)** at the top of this README to open the app in your browser whenever it's running.
+
 ## Start here
 
 - **Python 3.12 or newer**, with pip and venv. No Node build, database server, FFmpeg install, or paid account is needed to use the app. A recent Chrome, Edge, Firefox or Safari browser is recommended; the exercised browser is Chrome on macOS.
