@@ -4,6 +4,12 @@ A little music, made yours. A local Python music app that turns a topic into an 
 
 ![Jukebox collection](docs/screenshots/collection.png)
 
+## ▶ Quick open
+
+**App already running?** Click here: **[Open the Jukebox](http://127.0.0.1:8765)**
+
+Not running yet? Start it first with the steps below ([Start here](#start-here)), then come back to this link.
+
 ## Start here
 
 - **Python 3.12 or newer**, with pip and venv. No Node build, database server, FFmpeg install, or paid account is needed to use the app. A recent Chrome, Edge, Firefox or Safari browser is recommended; the exercised browser is Chrome on macOS.
