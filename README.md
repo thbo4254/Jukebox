@@ -4,6 +4,8 @@ A little music, made yours. A local Python music app that turns a topic into an 
 
 ![Jukebox collection](docs/screenshots/collection.png)
 
+> 💿 **The look:** a 70s disco room — glowing neon bubble-letter signs, a spinning mirror ball in the header, midnight-purple walls, hot pink / cyan / yellow neon. All pure CSS: nothing is downloaded, no remote fonts.
+
 ## ▶ Quick open
 
 **App already running?** Click here: **[Open the Jukebox](http://127.0.0.1:8765)**
