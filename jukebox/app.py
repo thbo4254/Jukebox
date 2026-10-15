@@ -41,7 +41,7 @@ def safe_error(exc):
     return str(exc) if isinstance(exc,ServiceError) else 'The service response could not be processed. Please retry; your existing library is safe.'
 
 
-def create_app(data_dir=None, services=None, samples=ROOT/'samples'):
+def create_app(data_dir=None, services=None, samples: 'Path | None'=ROOT/'samples'):
     store=Store(data_dir or os.environ.get('JUKEBOX_DATA_DIR',ROOT/'data'))
     tasks=set()
     lock=asyncio.Lock()
