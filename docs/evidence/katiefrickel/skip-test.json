@@ -1,0 +1,137 @@
+[
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "YOUR DJ IS GETTING READY\nRooftop R",
+  "t": 2.0,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "blob:/6151618a-faa6-45c0-89cc-877970c3926d",
+  "paused": false,
+  "ct": 0.94,
+  "dur": 7.52,
+  "now": "ON AIR \u00b7 DJ INTRO\nRooftop Raccoon ",
+  "t": 4.0,
+  "phase": "DJ_SPEECH"
+ },
+ {
+  "src": "blob:/6151618a-faa6-45c0-89cc-877970c3926d",
+  "paused": false,
+  "ct": 2.95,
+  "dur": 7.52,
+  "now": "ON AIR \u00b7 DJ INTRO\nRooftop Raccoon ",
+  "t": 6.0,
+  "phase": "DJ_SPEECH"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 2.13,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio",
+  "t": 8.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 4.14,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio",
+  "t": 10.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 6.14,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio",
+  "t": 12.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 8.15,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio",
+  "t": 14.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 10.16,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio",
+  "t": 16.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nFirst Sno",
+  "t": 18.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nFirst Sno",
+  "t": 20.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "blob:/cc229254-409f-4129-b1d3-74077ab4ce6a",
+  "paused": false,
+  "ct": 1.53,
+  "dur": 5.76,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Ma",
+  "t": 22.3,
+  "phase": "DJ_SPEECH"
+ },
+ {
+  "src": "blob:/cc229254-409f-4129-b1d3-74077ab4ce6a",
+  "paused": false,
+  "ct": 3.53,
+  "dur": 5.76,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Ma",
+  "t": 24.3,
+  "phase": "DJ_SPEECH"
+ },
+ {
+  "src": "blob:/cc229254-409f-4129-b1d3-74077ab4ce6a",
+  "paused": false,
+  "ct": 5.54,
+  "dur": 5.76,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Ma",
+  "t": 26.3,
+  "phase": "DJ_SPEECH"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 1.7,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main St",
+  "t": 28.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 3.71,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main St",
+  "t": 30.3,
+  "phase": "MUSIC"
+ }
+]

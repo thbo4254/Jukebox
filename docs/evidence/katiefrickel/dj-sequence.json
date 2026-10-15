@@ -1,0 +1,452 @@
+[
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nRooftop Raccoon Radio\nLo-fi beats",
+  "notice": "",
+  "t": 2.0,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "blob:/2ebe45ed-534d-4a1e-bca7-c322a01c32b0",
+  "paused": false,
+  "ct": 1.09,
+  "dur": 6.4,
+  "now": "ON AIR \u00b7 DJ INTRO\nRooftop Raccoon Radio\nDrop it to the dream",
+  "notice": "",
+  "t": 4.0,
+  "phase": "OTHER"
+ },
+ {
+  "src": "blob:/2ebe45ed-534d-4a1e-bca7-c322a01c32b0",
+  "paused": false,
+  "ct": 3.09,
+  "dur": 6.4,
+  "now": "ON AIR \u00b7 DJ INTRO\nRooftop Raccoon Radio\nDrop it to the dream",
+  "notice": "",
+  "t": 6.0,
+  "phase": "OTHER"
+ },
+ {
+  "src": "blob:/2ebe45ed-534d-4a1e-bca7-c322a01c32b0",
+  "paused": false,
+  "ct": 5.1,
+  "dur": 6.4,
+  "now": "ON AIR \u00b7 DJ INTRO\nRooftop Raccoon Radio\nDrop it to the dream",
+  "notice": "",
+  "t": 8.0,
+  "phase": "OTHER"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 0.62,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 10.0,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 2.62,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 12.0,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 4.63,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 14.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 6.64,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 16.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 8.65,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 18.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": false,
+  "ct": 10.65,
+  "dur": 12,
+  "now": "NOW SPINNING\nRooftop Raccoon Radio\nDrop it to the dreamy lo-",
+  "notice": "",
+  "t": 20.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nFirst Snow on Main Street\nAcoustic ",
+  "notice": "",
+  "t": 22.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nFirst Snow on Main Street\nAcoustic ",
+  "notice": "",
+  "t": 24.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/f9b66fd04b674929910f2dbd86aa71fd/audio",
+  "paused": true,
+  "ct": 12,
+  "dur": 12,
+  "now": "YOUR DJ IS GETTING READY\nFirst Snow on Main Street\nAcoustic ",
+  "notice": "",
+  "t": 26.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "blob:/0636de16-6cff-4d2d-8354-05fd0477cebb",
+  "paused": false,
+  "ct": 0,
+  "dur": 0,
+  "now": "YOUR DJ IS GETTING READY\nFirst Snow on Main Street\nAcoustic ",
+  "notice": "",
+  "t": 28.1,
+  "phase": "OTHER"
+ },
+ {
+  "src": "blob:/0636de16-6cff-4d2d-8354-05fd0477cebb",
+  "paused": false,
+  "ct": 1.95,
+  "dur": 6.84,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Main Street\nGet cozy with \"F",
+  "notice": "",
+  "t": 30.1,
+  "phase": "OTHER"
+ },
+ {
+  "src": "blob:/0636de16-6cff-4d2d-8354-05fd0477cebb",
+  "paused": false,
+  "ct": 3.96,
+  "dur": 6.84,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Main Street\nGet cozy with \"F",
+  "notice": "",
+  "t": 32.1,
+  "phase": "OTHER"
+ },
+ {
+  "src": "blob:/0636de16-6cff-4d2d-8354-05fd0477cebb",
+  "paused": false,
+  "ct": 5.97,
+  "dur": 6.84,
+  "now": "ON AIR \u00b7 DJ INTRO\nFirst Snow on Main Street\nGet cozy with \"F",
+  "notice": "",
+  "t": 34.1,
+  "phase": "OTHER"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 1.04,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main Street\nGet cozy with \"First ",
+  "notice": "",
+  "t": 36.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 3.04,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main Street\nGet cozy with \"First ",
+  "notice": "",
+  "t": 38.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 5.05,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main Street\nGet cozy with \"First ",
+  "notice": "",
+  "t": 40.1,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 7.06,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main Street\nGet cozy with \"First ",
+  "notice": "",
+  "t": 42.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": false,
+  "ct": 9.06,
+  "dur": 10,
+  "now": "NOW SPINNING\nFirst Snow on Main Street\nGet cozy with \"First ",
+  "notice": "",
+  "t": 44.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 46.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 48.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 50.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 52.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 54.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 56.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 58.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 60.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 62.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 64.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 66.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 68.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 70.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 72.2,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 74.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 76.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 78.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 80.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 82.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 84.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 86.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 88.3,
+  "phase": "MUSIC"
+ },
+ {
+  "src": "/api/songs/9630559008454e6b8f72b5740e4aba0d/audio",
+  "paused": true,
+  "ct": 10,
+  "dur": 10,
+  "now": "READY WHEN YOU ARE\nPut something good on.\nChoose a record to",
+  "notice": "",
+  "t": 90.3,
+  "phase": "MUSIC"
+ }
+]
