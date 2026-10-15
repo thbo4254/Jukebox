@@ -18,6 +18,7 @@ Not running yet? Start it first with the steps below ([Start here](#start-here))
 - **10/13/26 — Cute deco graphics**: a glowing jukebox icon in the top bar, a cassette tape in the player, and three music notes gently bobbing in the background. All hand-drawn inline SVG + CSS — no downloads, no JavaScript changes.
 - **10/13/26 — Quick open link**: click **[Open the Jukebox](http://127.0.0.1:8765)** at the top of this README to open the app in your browser whenever it's running.
 - **10/13/26 — Fresh screenshots, first live Windows run**: every README and test-report screenshot now shows the disco theme. The app was also exercised end-to-end on Windows with the live class services — Qwen lyrics, an ACE-Step song and a FLUX cover were all generated successfully from a local Windows launch.
+- **10/15/26 — Metadata parity + polish**: generated records now persist the class model names that produced them (`lyrics_model`, `image_model`) and the exact cover prompt, matching the bundled samples' metadata. Added a neon music-note favicon (inline SVG data URI — still zero downloads). Merged katiefrickel's fresh-install verification of all three core features with screenshots and evidence under [docs/evidence/katiefrickel](docs/evidence/katiefrickel).
 
 ## Start here
 
@@ -137,10 +138,10 @@ The [original assignment extraction](docs/original-assignment.md) and [approved 
 
 These obligations are **not completed by this implementation**:
 
-- All **five teammates** make a meaningful contribution and review another teammate’s work, using issues and PRs for substantial work.
-- Teammates verify the documentation and explain findings in their own words.
-- A teammate independently installs/runs from the extracted **GitHub-downloaded ZIP**, using only the documentation and class credentials, and tests all three core features.
-- Test on Windows (and other intended browsers); a configured CI matrix is not proof of a run.
+- All **five teammates** make a meaningful contribution and review another teammate’s work, using issues and PRs for substantial work. *Update: three teammates have contributed so far (thbo4254, Marandacsmith96, katiefrickel); the remaining two still owe a contribution and a review.*
+- Teammates verify the documentation and explain findings in their own words. *Update: katiefrickel verified the README against a fresh macOS install on 10/15 and wrote up findings in [docs/evidence/katiefrickel](docs/evidence/katiefrickel); other teammates should verify the docs independently before submission.*
+- A teammate independently installs/runs from the extracted **GitHub-downloaded ZIP**, using only the documentation and class credentials, and tests all three core features. *Update: done on macOS by katiefrickel (10/15, all three features plus a failure case); an independent Windows ZIP install is still outstanding.*
+- Test on Windows (and other intended browsers); a configured CI matrix is not proof of a run. *Update: first live Windows run was done 10/13 by Marandacsmith96 with all three features; a second, documentation-only Windows run from the submission ZIP remains outstanding.*
 - Submit one accessible repository URL, the actual final commit ID, and the GitHub ZIP for **that same commit**, excluding credentials, runtime data, voice files and uploads.
 
 The MVP is intended for teammate review through a pull request before merging. No license was selected on the team’s behalf.

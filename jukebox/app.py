@@ -99,6 +99,18 @@ def create_app(data_dir=None, services=None, samples=ROOT/'samples'):
         if sum(s['status'] in ('queued','generating') for s in store.list())>=3:
             raise HTTPException(429,'Three tracks are already waiting. Let one finish before adding another.')
         song=store.create(spec) if song_id is None else store.update(song_id,status='queued',error='')
+        if song_id is None:
+            # Record which class models produced this record and the exact cover
+            # prompt used, matching the bundled samples' metadata. Values come
+            # from the server-side config only, never from the browser.
+            cfg=getattr(services,'config',None) if services is not None else None
+            if cfg is not None:
+                extra={'image_model':cfg['image'].model,'image_prompt':Services.cover_prompt(spec)}
+                if not spec['instrumental'] and spec.get('lyrics','').strip():
+                    extra['lyrics_model']=cfg['text'].model
+                    extra['lyrics_source']='Qwen class endpoint; passed unchanged to ACE-Step'
+                store.update(song['id'],**extra)
+                song=store.get(song['id'])
         start(generate_job(song['id']))
         return song
 
