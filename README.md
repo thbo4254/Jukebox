@@ -4,6 +4,21 @@ A little music, made yours. A local Python music app that turns a topic into an 
 
 ![Jukebox collection](docs/screenshots/collection.png)
 
+> 💿 **The look:** a 70s disco room — glowing neon bubble-letter signs, a spinning mirror ball in the header, midnight-purple walls, hot pink / cyan / yellow neon. All pure CSS: nothing is downloaded, no remote fonts.
+
+## ▶ Quick open
+
+**App already running?** Click here: **[Open the Jukebox](http://127.0.0.1:8765)**
+
+Not running yet? Start it first with the steps below ([Start here](#start-here)), then come back to this link.
+
+## What's new
+
+- **10/13/26 — Disco neon theme**: 70s disco look — glowing neon bubble-letter signs, hot pink / cyan / yellow neon, midnight-purple walls, and a mirror ball in the header (a hand-built SVG with 144 individually lit mirror tiles, a sweeping glint, and colored light dots orbiting it). Pure CSS + inline SVG — still zero remote fonts or downloads.
+- **10/13/26 — Cute deco graphics**: a glowing jukebox icon in the top bar, a cassette tape in the player, and three music notes gently bobbing in the background. All hand-drawn inline SVG + CSS — no downloads, no JavaScript changes.
+- **10/13/26 — Quick open link**: click **[Open the Jukebox](http://127.0.0.1:8765)** at the top of this README to open the app in your browser whenever it's running.
+- **10/13/26 — Fresh screenshots, first live Windows run**: every README and test-report screenshot now shows the disco theme. The app was also exercised end-to-end on Windows with the live class services — Qwen lyrics, an ACE-Step song and a FLUX cover were all generated successfully from a local Windows launch.
+
 ## Start here
 
 - **Python 3.12 or newer**, with pip and venv. No Node build, database server, FFmpeg install, or paid account is needed to use the app. A recent Chrome, Edge, Firefox or Safari browser is recommended; the exercised browser is Chrome on macOS.
@@ -36,7 +51,7 @@ $env:JUKEBOX_ENDPOINTS_FILE = "$HOME\Downloads\class-endpoints.txt"
 .\.venv\Scripts\python.exe -m jukebox
 ```
 
-Using the venv interpreter directly avoids PowerShell activation-policy issues. Replace `3.12` with your installed newer version if necessary. **Windows instructions are provided but not yet independently tested on Windows**; see the verification checklist below.
+Using the venv interpreter directly avoids PowerShell activation-policy issues. Replace `3.12` with your installed newer version if necessary. **Windows instructions were exercised with a local Windows run on Oct 13, 2026 — live Qwen lyrics, an ACE-Step song and a FLUX cover all generated successfully**. An independent teammate install from the submission ZIP remains outstanding; see the checklist below.
 
 Open **http://127.0.0.1:8765**. Keep the terminal running. Stop with Ctrl+C. For later launches, activate the venv (or use its interpreter), set the external file path, and run `python -m jukebox` again.
 
