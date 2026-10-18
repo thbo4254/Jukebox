@@ -16,4 +16,4 @@ jobs:
           node-version: '22'
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
-      - run: node --test tests/player.test.mjs tests/voice.test.mjs
+      - run: node --test tests/player.test.mjs tests/voice.test.mjs tests/dj-deadline.test.mjs

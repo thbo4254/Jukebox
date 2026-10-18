@@ -15,6 +15,30 @@ class JukeboxPlayer {
     if(this.blob){URL.revokeObjectURL(this.blob);this.blob=null;}
     return this.token;
   }
+  async prepareDJ(song,controller){
+    let timer,onAbort,settled=false;
+    const deadline=new Promise((_,reject)=>{
+      onAbort=()=>reject(Error('DJ request cancelled'));
+      controller.signal.addEventListener('abort',onAbort,{once:true});
+      timer=setTimeout(()=>{
+        reject(Error('DJ preparation timed out'));
+        controller.abort();
+      },20000);
+    });
+    try{
+      // Race as well as abort: even a request that ignores cancellation must
+      // release the player. The budget covers the entire fetch/decode callback.
+      const request=this.requestDJ(song,controller.signal).then(result=>{
+        // A non-cooperative request may create a private speech blob after
+        // cancellation. It must neither play nor retain that late URL.
+        if((settled||controller.signal.aborted)&&result.url?.startsWith('blob:'))URL.revokeObjectURL(result.url);
+        return result;
+      });
+      return await Promise.race([request,deadline]);
+    }finally{
+      settled=true;clearTimeout(timer);controller.signal.removeEventListener('abort',onAbort);
+    }
+  }
   async next(){
     const token=this.invalidate();this.current=this.queue.shift()||null;this.intro='';
     if(!this.current){this.phase='idle';this.paused=true;this.changed();return;}
@@ -22,7 +46,7 @@ class JukeboxPlayer {
     if(!this.dj){await this.music(token);return;}
     this.phase='loading';this.changed();this.controller=new AbortController();
     try{
-      const result=await this.requestDJ(this.current,this.controller.signal);
+      const result=await this.prepareDJ(this.current,this.controller);
       if(token!==this.token){if(result.url?.startsWith('blob:'))URL.revokeObjectURL(result.url);return;}
       this.intro=result.intro;this.blob=result.url.startsWith('blob:')?result.url:null;
       await this.source(result.url,'speech',token);
