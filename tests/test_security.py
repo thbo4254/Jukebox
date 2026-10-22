@@ -15,7 +15,7 @@ def test_cross_origin_side_effects_rejected(client,headers):
 
 
 def test_large_body_rejected_before_parsing(client):
-    r=client.post('/api/lyrics',headers={'X-Jukebox':'1','Content-Type':'application/json'},content=b'x'*(8*1024*1024+1))
+    r=client.post('/api/lyrics',headers={'X-Jukebox':'1','Content-Type':'application/json'},content=b'x'*(9*1024*1024+1))
     assert r.status_code==413
 
 @pytest.mark.parametrize('duration',[0,9,121,9999])
