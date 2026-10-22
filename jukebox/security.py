@@ -2,7 +2,7 @@
 from urllib.parse import urlsplit
 from starlette.responses import JSONResponse
 
-MAX_BODY = 8*1024*1024
+MAX_BODY = 9*1024*1024
 
 class LocalOnly:
     def __init__(self, app):

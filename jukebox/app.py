@@ -34,7 +34,7 @@ class SongSpec(BaseModel):
 
 class DJSpec(BaseModel):
     personality: Literal['Warm & Laid-back','Upbeat & Playful','Music Enthusiast'] = 'Warm & Laid-back'
-    reference: str | None = Field(default=None,max_length=8*1024*1024)
+    reference: str | None = Field(default=None,max_length=9*1024*1024)
 
 
 def safe_error(exc):
