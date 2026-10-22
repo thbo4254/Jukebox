@@ -68,7 +68,7 @@ Never set endpoint keys in browser code. [The configuration example](endpoint-co
 
 ## Make a record
 
-1. Open **Create a song**. Enter a topic and optionally a title (otherwise your topic supplies the title).
+1. Open **Create a song**. Enter a topic and optionally a title. Leave the title blank for Qwen to create a concise name from the topic, style, mood, and approved lyrics when present. A title you enter is kept. Automatic naming has a 15-second deadline; if unavailable, the song uses **Untitled track** with a visible warning and music generation continues. Existing songs are not renamed.
 2. Choose a style and mood, or select **Custom** and describe each. Choose **10–120 seconds**. The service documentation advertises 10–600 seconds and the live model metadata advertises a 300-second maximum; this MVP intentionally caps requests at 120 seconds to keep shared-server jobs modest. Tested lengths are 10, 12 and 30 seconds; not every duration has been tested.
 3. **Instrumental** skips lyrics. For **With vocals**, click **Write lyrics with Qwen**, then review/edit the text. Only your explicit **Generate song & cover** starts the audio job. Edited lyrics are sent to ACE-Step unchanged with rewriting disabled; that does not guarantee a model will sing every word exactly.
 4. Optionally describe a cover idea; otherwise FLUX uses the song’s topic, style and mood. Click **Generate song & cover**.

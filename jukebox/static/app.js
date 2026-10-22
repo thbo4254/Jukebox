@@ -82,8 +82,9 @@ function renderLibrary(){
       if(s.cover_status==='failed')actions.append(button('Retry cover',()=>retry(s,true)));
     }else if(s.status==='failed')actions.append(button('Retry song',()=>retry(s,false),'secondary'));
     const card=make('article',{class:'record','data-song-id':s.id},[cover,make('h2',{text:s.title}),meta,actions]);
-    if(s.status!=='ready')card.append(make('p',{class:s.status==='failed'?'record-error':'record-status',text:s.status==='failed'?s.error:s.status==='queued'?'Waiting for the studio…':'Creating your music…'}));
+    if(s.status!=='ready')card.append(make('p',{class:s.status==='failed'?'record-error':'record-status',text:s.status==='failed'?s.error:s.title_status==='generating'?'Qwen is preparing your title…':s.title_status==='pending'?'Automatic title queued · waiting for the studio…':s.status==='queued'?'Waiting for the studio…':'Creating your music…'}));
     if(s.status==='ready'&&s.cover_status!=='ready')card.append(make('p',{class:s.cover_status==='failed'?'record-error':'record-status',text:s.cover_status==='failed'?s.cover_error:'Your music is ready. Painting the cover…'}));
+    if(s.title_status==='fallback')card.append(make('p',{class:'record-error',text:s.title_error}));
     return card;
   }));
 }
@@ -95,7 +96,7 @@ async function refresh(){
 }
 function choice(name){return $(name+'-select').value==='custom'?$('custom-'+name).value:$(name+'-select').value;}
 function spec(){
-  return {title:$('title').value.trim()||$('topic').value.trim().slice(0,60),topic:$('topic').value,style:choice('style'),mood:choice('mood'),duration:Number($('duration').value),instrumental:$('track-type').value==='instrumental',lyrics:$('lyrics').value,cover_prompt:$('cover-prompt').value};
+  return {title:$('title').value.trim(),topic:$('topic').value,style:choice('style'),mood:choice('mood'),duration:Number($('duration').value),instrumental:$('track-type').value==='instrumental',lyrics:$('lyrics').value,cover_prompt:$('cover-prompt').value};
 }
 for(const name of ['style','mood'])$(name+'-select').onchange=()=>{const custom=$(name+'-select').value==='custom';$('custom-'+name).hidden=!custom;$('custom-'+name).required=custom;};
 function updateForm(){

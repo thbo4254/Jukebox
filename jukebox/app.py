@@ -20,10 +20,11 @@ from .store import Store
 
 ROOT=Path(__file__).resolve().parent.parent
 DJ_TIMEOUT_SECONDS=15
+TITLE_TIMEOUT_SECONDS=15
 
 
 class SongSpec(BaseModel):
-    title: str = Field(min_length=1,max_length=100)
+    title: str = Field(default='',max_length=100)
     topic: str = Field(min_length=1,max_length=1500)
     style: str = Field(min_length=1,max_length=300)
     mood: str = Field(min_length=1,max_length=200)
@@ -99,6 +100,8 @@ def create_app(data_dir=None, services=None, samples: 'Path | None'=ROOT/'sample
             raise HTTPException(409,'Only failed tracks can be retried.')
         if sum(s['status'] in ('queued','generating') for s in store.list())>=3:
             raise HTTPException(429,'Three tracks are already waiting. Let one finish before adding another.')
+        if song_id is None and not spec['title'].strip():
+            spec=dict(spec,title='Untitled track',title_status='pending')
         song=store.create(spec) if song_id is None else store.update(song_id,status='queued',error='')
         if song_id is None:
             # Record which class models produced this record and the exact cover
@@ -129,6 +132,17 @@ def create_app(data_dir=None, services=None, samples: 'Path | None'=ROOT/'sample
     async def generate_job(song_id):
         async with lock:
             store.update(song_id,status='generating',error='')
+            if store.get(song_id).get('title_status') in ('pending','generating'):
+                store.update(song_id,title_status='generating')
+                try:
+                    # One overall title budget, separate from music/image requests.
+                    async with asyncio.timeout(TITLE_TIMEOUT_SECONDS):
+                        title=await require_services().title(store.get(song_id))
+                    store.update(song_id,title=title,title_status='generated',title_source='Qwen class endpoint')
+                except Exception:
+                    # Never echo model output or transport details into the warning.
+                    store.update(song_id,title='Untitled track',title_status='fallback',
+                                 title_error='Automatic title unavailable. Using “Untitled track”; music generation continues.')
             try:
                 audio,meta=await require_services().music(store.get(song_id))
                 info=sf.info(io.BytesIO(audio))
@@ -142,7 +156,7 @@ def create_app(data_dir=None, services=None, samples: 'Path | None'=ROOT/'sample
     @app.exception_handler(RequestValidationError)
     async def invalid(request,exc):
         # Do not echo posted input in an error response.
-        return JSONResponse({'detail':'Check the form: title, topic, style and mood are required; duration must be 10–120 seconds and text must fit the displayed limits.'},status_code=422)
+        return JSONResponse({'detail':'Check the form: topic, style and mood are required; title is optional; duration must be 10–120 seconds and text must fit the displayed limits.'},status_code=422)
 
     @app.exception_handler(KeyError)
     async def missing(request,exc):
