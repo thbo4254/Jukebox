@@ -19,6 +19,7 @@ from .services import Services, ServiceError
 from .store import Store
 
 ROOT=Path(__file__).resolve().parent.parent
+DJ_TIMEOUT_SECONDS=15
 
 
 class SongSpec(BaseModel):
@@ -215,8 +216,12 @@ def create_app(data_dir=None, services=None, samples: 'Path | None'=ROOT/'sample
             except Exception:
                 raise HTTPException(422,'Use a valid MP3 or WAV voice reference, 1–60 seconds and under 6 MB. Only upload a voice you have permission to use.') from None
         try:
-            audio,intro=await service.dj(song,spec.personality,reference)
+            # One budget for text plus speech, independent of generation timeouts.
+            async with asyncio.timeout(DJ_TIMEOUT_SECONDS):
+                audio,intro=await service.dj(song,spec.personality,reference)
             return {'audio':base64.b64encode(audio).decode('ascii'),'intro':intro}
+        except TimeoutError:
+            raise HTTPException(504,'DJ preparation timed out. Continue with music or retry playback.') from None
         except ServiceError:
             raise
         except Exception:
