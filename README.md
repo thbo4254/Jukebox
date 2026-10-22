@@ -66,15 +66,15 @@ The first launch copies the three bundled originals into the local library. Late
 
 Never set endpoint keys in browser code. [The configuration example](endpoint-config.example.txt) contains placeholders only; it is not a usable credential file. The app deliberately accepts only the required class host and ports, ignoring unrelated endpoints, including port 9000.
 
-## Make a record
+## Making a record
 
-1. Open **Create a song**. Enter a topic and optionally a title. Leave the title blank for Qwen to create a concise name from the topic, style, mood, and approved lyrics when present. A title you enter is kept. Automatic naming has a 15-second deadline; if unavailable, the song uses **Untitled track** with a visible warning and music generation continues. Existing songs are not renamed.
+1. Open **Create a song**. Enter a topic and optionally a title. Leave the title blank for Qwen to create a concise name from the topic, style, mood, and approved lyrics when present. A title you enter is kept. Automatic naming has a 15-second deadline; if unavailable, the song is named **Untitled track** with a visible warning and music generation continues. Existing songs are not renamed.
 2. Choose a style and mood, or select **Custom** and describe each. Choose **10–120 seconds**. The service documentation advertises 10–600 seconds and the live model metadata advertises a 300-second maximum; this MVP intentionally caps requests at 120 seconds to keep shared-server jobs modest. Tested lengths are 10, 12 and 30 seconds; not every duration has been tested.
 3. **Instrumental** skips lyrics. For **With vocals**, click **Write lyrics with Qwen**, then review/edit the text. Only your explicit **Generate song & cover** starts the audio job. Edited lyrics are sent to ACE-Step unchanged with rewriting disabled; that does not guarantee a model will sing every word exactly.
 4. Optionally describe a cover idea; otherwise FLUX uses the song’s topic, style and mood. Click **Generate song & cover**.
 5. Your collection shows real named states: waiting, creating music, then painting the cover. Keep the Python app running. No pretend percentage is shown.
 
-New audio becomes playable as soon as it is safely downloaded. If its cover fails, a neutral record placeholder remains and **Retry cover** requests only the art, never another song. Failed audio has **Retry song**. Restart-interrupted jobs are marked retryable; remote work is not resumed automatically.
+New audio becomes playable as soon as it is safely downloaded. If the cover fails, a neutral record placeholder remains and **Retry cover** requests only the art, never another song. Failed audio has **Retry song**. Restart-interrupted jobs are marked retryable; remote work is not resumed automatically.
 
 ![Editable lyrics before generation](docs/screenshots/lyrics-review.png)
 
