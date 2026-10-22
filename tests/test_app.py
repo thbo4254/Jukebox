@@ -77,3 +77,55 @@ def test_retry_and_new_requests_share_atomic_three_job_admission(tmp_path,occupi
                 added=[t for t in asyncio.all_tasks()-before if t.get_coro().__qualname__.endswith('generate_job')]
                 assert len(added)==3-occupied
     asyncio.run(run())
+
+
+class ConfiguredServices(FixtureServices):
+    """Fixture services with the real endpoint-config shape, so the metadata
+    enrichment path (which reads services.config) is exercised."""
+    from jukebox.config import Endpoint
+    config={
+        'text': Endpoint('http://dobolyi.com:9001/v1','cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit','fixture-key'),
+        'image': Endpoint('http://dobolyi.com:9006/v1','black-forest-labs/FLUX.2-klein-4B','fixture-key'),
+        'music': Endpoint('http://dobolyi.com:9007','acestep-v15-xl-turbo','fixture-key'),
+        'speech': Endpoint('http://dobolyi.com:9008','Chatterbox Multilingual V3','fixture-key'),
+    }
+
+
+def test_generated_records_persist_class_model_metadata(tmp_path):
+    from jukebox.app import create_app
+    app=create_app(tmp_path,services=ConfiguredServices(),samples=None)
+    with TestClient(app) as c:
+        h={'X-Jukebox':'1'}
+        vocal={'title':'Rainy Cafe','topic':'a rainy cafe at dusk','style':'jazz','mood':'warm',
+               'duration':30,'instrumental':False,'lyrics':'[Verse]\nRain on glass'}
+        r=c.post('/api/songs',json=vocal,headers=h)
+        assert r.status_code==202
+        doc=r.json()
+        assert doc['lyrics_model']=='cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit'
+        assert doc['lyrics_source']=='Qwen class endpoint; passed unchanged to ACE-Step'
+        assert doc['image_model']=='black-forest-labs/FLUX.2-klein-4B'
+        assert 'no text, no lettering' in doc['image_prompt'] and 'rainy cafe' in doc['image_prompt']
+        # persisted in the library, not just echoed in the admission response
+        stored=c.get('/api/songs/'+doc['id']).json()
+        assert stored['lyrics_model']==doc['lyrics_model']
+        assert stored['image_prompt']==doc['image_prompt']
+
+        instrumental={'title':'First Snow','topic':'first snow on main street','style':'jazz',
+                      'mood':'warm','duration':30,'instrumental':True}
+        r2=c.post('/api/songs',json=instrumental,headers=h)
+        assert r2.status_code==202
+        doc2=r2.json()
+        assert doc2['image_model']=='black-forest-labs/FLUX.2-klein-4B'
+        assert 'first snow' in doc2['image_prompt']
+        assert 'lyrics_model' not in doc2 and 'lyrics_source' not in doc2
+
+
+def test_cover_prompt_prefers_explicit_idea_over_topic():
+    from jukebox.services import Services
+    spec={'cover_prompt':'A neon-lit diner','topic':'a rainy street','style':'retro soul-pop','mood':'cheerful'}
+    prompt=Services.cover_prompt(spec)
+    assert 'A neon-lit diner' in prompt and 'retro soul-pop' in prompt
+    assert 'no text, no lettering' in prompt
+    # no cover idea -> the topic supplies the concept
+    spec2=dict(spec,cover_prompt='')
+    assert 'a rainy street' in Services.cover_prompt(spec2)

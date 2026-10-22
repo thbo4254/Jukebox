@@ -27,6 +27,26 @@ const player=new JukeboxPlayer({audio,notice,onChange:renderPlayer,requestDJ:asy
   return {intro:d.intro,url:URL.createObjectURL(new Blob([bytes],{type:'audio/mpeg'}))};
 }});
 window.jukebox={player}; // Useful for local diagnostics; contains no server configuration or credentials.
+// Personal touches: a nameable station and a time-aware lounge greeting.
+function greeting(){
+  const h=new Date().getHours();
+  if(h<5)return 'THE NIGHT IS YOUNG';
+  if(h<12)return 'MORNING SET — COFFEE ON';
+  if(h<17)return 'AFTERNOON SET — SETTLE IN';
+  if(h<21)return 'EVENING SET — THE LOUNGE IS OPEN';
+  return 'LAST CALL — NIGHTCAP SET';
+}
+const station=$('station-name');
+function applyStation(){
+  const name=(station?station.value:'').trim().toUpperCase();
+  $('brand-name').textContent=name||'jukebox';
+  document.title=name?`${name} · Jukebox`:'Jukebox — a little music, made yours';
+}
+if(station){
+  try{station.value=localStorage.getItem('jukebox-station')||'';}catch{}
+  station.oninput=()=>{try{localStorage.setItem('jukebox-station',station.value);}catch{}applyStation();};
+}
+applyStation();
 function renderPlayer(){
   $('queue').replaceChildren(...player.queue.map((s,i)=>make('li',{},[make('img',{src:art(s),alt:''}),make('span',{text:s.title}),button('×',()=>player.remove(i))])));
   [...$('queue').querySelectorAll('button')].forEach((b,i)=>b.setAttribute('aria-label','Remove '+player.queue[i].title+' from queue'));
@@ -34,7 +54,7 @@ function renderPlayer(){
   try{sessionStorage.setItem('jukebox-queue',JSON.stringify(player.queue.map(s=>s.id)));}catch{}
   $('play-pause').textContent=player.paused?'Play':'Pause';$('play-pause').setAttribute('aria-label',player.paused?'Play':'Pause');
   const phases={idle:'READY WHEN YOU ARE',loading:'YOUR DJ IS GETTING READY',speech:'ON AIR · DJ INTRO',music:'NOW SPINNING'};
-  $('now-phase').textContent=(player.paused&&player.current?'PAUSED · ':'')+phases[player.phase];
+  $('now-phase').textContent=(player.paused&&player.current?'PAUSED · ':'')+(player.current?phases[player.phase]:greeting());
   $('now-title').textContent=player.current?.title||'Put something good on.';
   $('now-detail').textContent=player.intro||player.current?.style||'Choose a record to start listening.';
   $('now-cover').src=art(player.current);$('now-cover').alt=player.current?'Cover for '+player.current.title:'Record placeholder';
